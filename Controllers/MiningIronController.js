@@ -1,4 +1,3 @@
-
 function miningIron() {
   ironMiner.miningIron();
 }

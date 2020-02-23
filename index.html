@@ -9,7 +9,9 @@
 <body>  
   <script defer src="Financial/Bank.js"></script>
   <script defer src="Mining/IronMining.js"></script>
-  <script defer src="Controllers/MiningController.js"></script>
+  <script defer src="Mining/StoneMining.js"></script>
+  <script defer src="Controllers/MiningIronController.js"></script>
+  <script defer src="Controllers/MiningStoneController.js"></script>
   <script defer src="Factory/SteelMills.js"></script>
   <script defer src="Display.js"></script>
   <script defer src="Controllers/GameController.js"></script>
@@ -25,7 +27,7 @@
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mining</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Smelter</a>
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Refinery</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Factory</a>
@@ -35,8 +37,29 @@
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="row">
+          <!--<Stone Miner>-->
+            <div class="col">
+              <div style="padding: 5px;">
+                <div class="card bg-light mb-3" style="max-width: 20rem;">
+                  <div class="card-header">Stone</div>
+                  <div class="card-body">
+                    <!--Label's dos valores-->
+                    <h5 id="mined-stone"></h5>
+                    <h5 id="amount-workers-stone"></h5>
+                    <h5 id="workers-salary-stone"></h5> 
+                    <h5 id="stone-selling-value"></h5>                 
+                    <!--Botões de ações-->            
+                    <button onclick ="miningStone()" class="btn btn-danger btn-sm">Mine</button>
+                    <button onclick ="sellStone()" class="btn btn-success btn-sm" id="sell-stone"></button>
+                    <button onclick ="hireNewWorkersStoneMine()" class="btn btn-primary btn-sm" id="hire-workers-stonemine"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--</Stone Miner>-->
+          <!--<Iron Miner>-->
           <div class="col">
-            <div style="padding: 10px;">
+            <div style="padding: 5px;">
               <div class="card bg-light mb-3" style="max-width: 20rem;">
                 <div class="card-header">Iron</div>
                 <div class="card-body">
@@ -52,15 +75,16 @@
                 </div>
               </div>
             </div>
-          </div>          
+          </div>
+          <!--</Iron Miner>-->          
         </div>
       </div>
-      <!--Smelter -TAB 2-->
+      <!--REFINERY -TAB 2-->
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <div class="row">
             <div class="col">
-              Conteúdo da aba SMELTER
+              Conteúdo da aba REFINERY
               <!--
               <div style="padding: 10px;">
                 <div class="card bg-light mb-3" style="max-width: 20rem;">

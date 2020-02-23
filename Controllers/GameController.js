@@ -1,8 +1,7 @@
 var bank = new Bank();
+var stoneMiner = new StoneMining();
 var ironMiner = new IronMining();
 var steelMills = new SteelMills();
-
-
 
 /* SMELTER */
 function ironSmelter() {
